@@ -1,14 +1,10 @@
-
 export const getAllFreelancers = `
-  *[_type == "freelancer"]{
-    _id,
-    name,
+   _id,
+    freelancerName,
     slug,
-    title,
-    image {
-      asset->{url}
-    },
-    skills[]->{name},
-    category->{name}
+    title->{titleName},
+    'image':picture.asset->url,
+    skills[]->{skillName},
+    category->{categoryName},
   }
-`;
+`
