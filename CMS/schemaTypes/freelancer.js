@@ -9,6 +9,16 @@ export default {
       type: 'string',
     },
     {
+      name: 'slug',
+      title: 'Slug',
+      type: 'slug',
+      options: {
+        source: 'freelancerName',
+        maxLength: 96,
+      },
+    },
+
+    {
       name: 'picture',
       title: 'Picture',
       type: 'image',
