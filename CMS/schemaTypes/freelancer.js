@@ -57,11 +57,5 @@ export default {
       type: 'array',
       of: [{type: 'reference', to: [{type: 'project'}]}],
     },
-    {
-      name: 'category',
-      title: 'Category',
-      type: 'reference',
-      to: [{type: 'category'}],
-    },
   ],
 }
