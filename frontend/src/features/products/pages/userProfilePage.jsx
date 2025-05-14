@@ -30,9 +30,9 @@ function FreelancerList() {
         >
           <h2 className="text-xl font-bold">{freelancer.name}</h2>
           <p className="text-sm text-gray-700">{freelancer.title}</p>
-          {freelancer.image?.asset?.url ? (
+          {freelancer.image ? (
             <img
-              src={freelancer.image.asset.url}
+              src={freelancer.image}
               alt={freelancer.name}
               width="150"
               className="rounded-full"
@@ -46,11 +46,11 @@ function FreelancerList() {
             />
           )}
           <p className="text-sm text-gray-600">
-            Kategori: {freelancer.category?.name}
+            Kategori: {freelancer.category?.categoryName}
           </p>
           <p className="text-sm text-gray-600">
             Skills:{" "}
-            {freelancer.skills?.map((s) => s.name).join(", ") || "Inga angivna"}
+            {freelancer.skills?.map((s) => s.skillName).join(", ") || "Inga angivna"}
           </p>
         </div>
       ))}

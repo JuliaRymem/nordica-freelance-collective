@@ -1,4 +1,5 @@
 export const getAllFreelancers = `
+ *[_type == "freelancer"]{
    _id,
     freelancerName,
     slug,
