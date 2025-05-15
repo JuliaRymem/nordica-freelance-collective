@@ -4,7 +4,7 @@ import getSingleProject from "../../../../../CMS/queries/getSingleProject";
 import FreelancerSinlge from "../components/FreelancerSinlge";
 import ProjectsSingle from "../components/ProjectsSingle";
 import TestimonialSingle from "../components/TestimonialSingle";
-import "../components/singlepageproject.css";
+import "../../styles/singlepageproject.css";
 
 const SinglePageProject = () => {
   // const slug = useParams();
@@ -30,7 +30,7 @@ const SinglePageProject = () => {
 
       <section className="lg:flex flex-row lg:gap-5">
         <ProjectsSingle data={data[0]?.projects} />
-        <hr className="md:hidden" />
+        <hr className="md:hidden mb-10" />
         <TestimonialSingle data={data[0]?.testimonial} />
       </section>
     </main>
