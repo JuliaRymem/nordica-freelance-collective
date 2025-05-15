@@ -10,11 +10,11 @@ export const getAllFreelancers = `
 `
 
 // Sök efter frilansare baserat på namn, titel eller kompetens
-export const searchFunction = `
+export const searchFunction = (query) => `
 *[_type == "freelancer" && (
-freelancerName match "*$query*" ||
-title->titleName match "*$query*" ||
-skills[]->skillName match "*$query*"
+freelancerName match "*${query}*" ||
+title->titleName match "*${query}*" ||
+skills[]->skillName match "*${query}*"
 )]{
 _id,
 freelancerName,
