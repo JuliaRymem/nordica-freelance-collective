@@ -27,6 +27,18 @@ function Hero() {
         </button>
       </div>
 
+      {/* Sökruta */}
+      <div className="flex justify-center items-center bg-white rounded-full px-4 py-2 border border-black mb-4 w-full max-w-md mx-auto">
+        <Search className="text-black mr-2 w-5 h-5" />
+        <input
+          type="text"
+          placeholder="Search for any services..."
+          className="flex-grow text-black bg-transparent outline-none placeholder-gray-500"
+        />
+        <Mic className="text-black w-5 h-5 mx-2" />
+        <ArrowRight className="text-black w-5 h-5" />
+      </div>
+
     </div>
   );
 }
