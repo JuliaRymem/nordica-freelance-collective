@@ -23,7 +23,10 @@ const ProjectsSingle = ({ data }) => {
             >
               {item.status}
             </p>
-            <time datetime="2025-05-15" class="text-sm text-gray-500 italic">
+            <time
+              dateTime="2025-05-15"
+              className="text-sm text-gray-500 italic"
+            >
               {item.date}
             </time>
           </section>
