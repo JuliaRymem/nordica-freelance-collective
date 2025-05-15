@@ -3,6 +3,9 @@ import FreelancerSearchList from "./features/search/FreelancerSearchList";
 
 function App() {
   return (
+
+    <>
+
     <div>
       <h1>Våra frilansare</h1>
       <FreelancerList />
