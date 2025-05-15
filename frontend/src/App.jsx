@@ -1,23 +1,15 @@
+import Hero from "./components/Hero";
 import FreelancerList from "./features/products/pages/userProfilePage";
-import FreelancerSearchList from "./features/search/FreelancerSearchList";
+import Footer from "./components/Footer";
 
 function App() {
   return (
-
     <>
-
-    <div>
-      <h1>Våra frilansare</h1>
+      <Hero />
       <FreelancerList />
-<<<<<<< Updated upstream
-      
-      <h2>Testa FreelancerSearchList</h2>
-      <FreelancerSearchList />
-    </div>
-=======
-      <Footer />
+      <Footer/>
+    
     </>
->>>>>>> Stashed changes
   );
 }
 
