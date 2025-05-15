@@ -1,0 +1,82 @@
+@import "tailwindcss";
+
+@layer components {
+  .main-mobile {
+    @apply max-w-95 mx-auto my-10 flex flex-col gap-10;
+  }
+
+  .skill-div-mobile {
+    @apply flex items-center justify-end space-x-2 mt-10 bg-[#b2c1c5] rounded-md;
+  }
+
+  .skill-div-mb {
+    @apply md:bg-transparent;
+  }
+
+  .headline {
+    @apply pb-4 rounded-md p-2 text-2xl text-center  font-semibold;
+  }
+
+  .headline-standard {
+    @apply text-shadow-lg/30 font-semibold text-3xl;
+  }
+
+  .section-container {
+    @apply relative bg-[#FDFFFF] rounded-md p-10 overflow-hidden;
+  }
+
+  .img-mobile {
+    @apply h-36 w-36 rounded-full shadow-black shadow-2xl;
+  }
+
+  .name-lg {
+    @apply lg:text-5xl;
+  }
+
+  .p-text {
+    @apply text-base md:text-lg text-gray-700 leading-relaxed tracking-normal;
+  }
+
+  .bigger {
+    @apply md:block md:bg-transparent;
+  }
+
+  .md-container {
+    @apply md:max-w-xl md:mx-auto md:text-center;
+  }
+
+  .lg-container {
+    @apply lg:max-w-4xl;
+  }
+}
+
+@keyframes animate-slide {
+  0% {
+    transform: translateY(0.5%);
+  }
+  12.5% {
+    transform: translateY(-12.5%);
+  }
+  25% {
+    transform: translateY(-25%);
+  }
+  37.5% {
+    transform: translateY(-37.5%);
+  }
+  50% {
+    transform: translateY(-50%);
+  }
+  62.5% {
+    transform: translateY(-62.5%);
+  }
+  75% {
+    transform: translateY(-75%);
+  }
+  87.5% {
+    transform: translateY(-87.5%);
+  }
+}
+
+.animate-slide {
+  animation: animate-slide 21s infinite cubic-bezier(0.9, 0.01, 0.3, 0.99);
+}

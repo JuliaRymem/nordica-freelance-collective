@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+@layer components {
+  .background { 
+    background: #B2c4c5;
+     @apply text-black p-4 rounded;
+}
+
+.headerText { 
+    @apply text-center my-12
+}
+.ourFreelancer {
+@apply text-4xl font-extrabold text-gray-900
+}
+
+.freelancer {
+ @apply text-blue-600
+}
+.headerP {
+  @apply  mt-2 text-gray-600 m-5
+}
+
+.freelancerContainer {
+    @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8
+}
+
+.freelancerId {
+    @apply bg-white p-4 rounded-xl shadow-xl hover:scale-105 transition
+}
+
+
+.freelancerImage {
+   @apply w-26 h-26 object-cover rounded-lg mx-auto mb-4
+}
+
+.freelancerName{
+  @apply  text-2xl font-semibold text-center
+}
+
+.freelancerTitle{
+    @apply text-sm text-gray-800 text-center mb-2 font-bold
+}
+
+.category {
+    @apply text-sm text-gray-500 text-center mb-2
+}
+
+.categoryText {
+@apply text-gray-600 font-bold
+}
+
+.skills {
+   @apply text-sm text-gray-500 text-center 
+}
+
+.skillsText {
+    @apply text-gray-600 font-bold
+}
+
+.readMoreBtn{
+    @apply bg-blue-200 px-4 p-2 text-xl hover:bg-blue-400 hover:text-white rounded-xl mt-5
+}
+
+}
+
