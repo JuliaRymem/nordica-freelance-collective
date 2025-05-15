@@ -27,7 +27,7 @@ const FreelancerSearchList = () => {
 
   return (
     <div>
-      <SearchBar onSearch={setQuery} /> {}
+      <SearchBar onSearch={setQuery} />
       {freelancers.length === 0 ? (
         <p>No results</p>
       ) : (
