@@ -9,10 +9,15 @@ function App() {
     <div>
       <h1>Våra frilansare</h1>
       <FreelancerList />
+<<<<<<< Updated upstream
       
       <h2>Testa FreelancerSearchList</h2>
       <FreelancerSearchList />
     </div>
+=======
+      <Footer />
+    </>
+>>>>>>> Stashed changes
   );
 }
 
