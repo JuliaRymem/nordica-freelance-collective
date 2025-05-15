@@ -13,7 +13,15 @@ function Hero() {
         Nordica <br /> Freelance Collective
       </h1>
 
-
+      {/* Knappar */}
+      <div className="flex justify-center space-x-4 mb-6">
+        <button className="px-6 py-3 rounded-full border border-black bg-white text-black font-semibold">
+          LOG IN
+        </button>
+        <button className="px-6 py-3 rounded-full border border-black bg-black text-white font-semibold">
+          JOIN US
+        </button>
+      </div>
 
 {/* Sökruta */}
 <div className="flex justify-center">
