@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+.navbar {
+  @apply flex items-center justify-between px-8 py-4 bg-[#B2C5C5] relative;
+}
+
+/* Vänster och höger tar lika plats */
+.nav-left,
+.nav-right {
+  @apply flex-1;
+}
+
+.nav-center {
+  @apply flex justify-center flex-1;
+}
+
+.nav-links {
+  @apply flex space-x-8;
+}
+
+.nav-links a {
+  @apply text-white font-semibold hover:text-gray-200 transition duration-300;
+}
+
+.nav-logo {
+  @apply w-24 h-24 rounded-full object-cover;
+}
+
+.hamburger {
+  @apply absolute right-6 top-4;
+}
+
+.mobile-menu {
+  @apply bg-[#B2C5C5] text-white w-full absolute left-0 top-full px-6 pb-4;
+}
+
+/* Högerlänkar justerade åt höger */
+.nav-right .nav-links {
+  @apply justify-end w-full;
+}

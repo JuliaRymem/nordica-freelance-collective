@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Search, Mic, ArrowRight } from "lucide-react";
 
 export default function SearchBar({ onSearch }) {
   const [query, setQuery] = useState("");
@@ -10,11 +11,25 @@ export default function SearchBar({ onSearch }) {
   };
 
   return (
-    <input
-      type="text"
-      placeholder="Search freelancers..."
-      value={query}
-      onChange={handleChange}
-    />
+  <div className="searchBar">
+      <div className="searchIcon">
+        {/* Sökikon till vänster */}
+        <Search className="iconLeft"  />
+        {/* Inputfältet */}
+        <input
+          className="bar"
+          type="text"
+          placeholder="Sök frilansare..."
+          value={query}
+          onChange={handleChange}
+        />
+
+        {/* Mic + Arrow till höger */}
+        <div className="iconRight">
+          <Mic className="micIcon" />
+          <ArrowRight className="arrowRight"  />
+        </div>
+      </div>
+    </div>
   );
 }
