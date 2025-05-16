@@ -67,7 +67,7 @@
   
   /*Trusted freelancer*/
 .freelancer-card {
-  @apply bg-white rounded-xl p-4 mt-12 max-w-xs mx-auto flex items-center justify-between border border-black;
+  @apply bg-white rounded-xl p-4 mt-20 max-w-xs mx-auto flex items-center justify-between border border-black ;
 }
 
 .freelancer-text {
