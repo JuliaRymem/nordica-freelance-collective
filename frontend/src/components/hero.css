@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+.hero-container {
+  @apply min-h-screen bg-[#b3c4c5] text-white px-5 py-9 font-sans;
+}
+
+.hero-topbar {
+  @apply flex justify-between items-center mb-1;
+}
+
+.hero-logo {
+  @apply h-30 rounded-full;
+}
+
+.hero-menu-icon {
+  @apply text-black h-10 w-15;
+}
+
+.hero-heading {
+  @apply text-4xl md:text-4xl font-bold leading-snug text-white text-center mb-6;
+  text-shadow: 5px 3px 10px rgba(0, 0, 0, 0.7); /* Funkar ej */
+}
+
+.hero-buttons {
+  @apply flex justify-center space-x-4 mb-9;
+}
+
+.btn-login {
+  @apply px-6 py-1 rounded-full border border-black bg-white text-black font-semibold text-[12px] hover:bg-amber-50;
+}
+
+.btn-join {
+  @apply px-6 py-3 rounded-full border border-black bg-black text-white font-semibold text-[12px] hover:bg-neutral-800;
+}
+
+.hero-search {
+  @apply flex justify-center items-center bg-white rounded-full px-1 py-2 border border-black mb-4 w-full max-w-md mx-auto;
+}
+
+.search-input {
+  @apply flex-grow text-black text-[12px] bg-transparent outline-none placeholder-gray-500;
+}
+
+.freelancer-card {
+  @apply bg-white rounded-xl p-4 max-w-xs mx-auto flex items-center justify-between border border-black;
+}
+
+.freelancer-text {
+  @apply text-black text-sm font-light;
+}
+
+.freelancer-stars {
+  @apply text-yellow-500 text-sm;
+}
+
+.freelancer-avatars {
+  @apply flex -space-x-3;
+}
+
+.avatar {
+  @apply w-6 h-6 rounded-full border-2 border-white;
+}
+
+.avatar-pink {
+  @apply bg-pink-300;
+}
+
+.avatar-blue {
+  @apply bg-blue-300;
+}
+
+.avatar-yellow {
+  @apply bg-yellow-300;
+}
+
+.avatar-purple {
+  @apply bg-purple-300;
+}
