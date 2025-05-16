@@ -15,11 +15,17 @@
 .hero-menu-icon {
   @apply text-black h-10 w-15;
 }
-
+/*Text i header*/
 .hero-heading {
-  @apply text-4xl md:text-4xl font-bold leading-snug text-white text-center mb-6;
-  text-shadow: 5px 3px 10px rgba(0, 0, 0, 0.7); /* Funkar ej */
+    @apply text-4xl md:text-5xl font-semibold leading-snug text-white text-center mb-6;
+    text-shadow: 5px 3px 10px rgba(0, 0, 0, 0.7); /* Funkar ej */
 }
+
+  @media (max-width: 430px) {
+    .hero-heading {
+      @apply text-2xl;
+    }
+  }
 
 .hero-buttons {
   @apply flex justify-center space-x-4 mb-9;
@@ -33,16 +39,35 @@
   @apply px-6 py-3 rounded-full border border-black bg-black text-white font-semibold text-[12px] hover:bg-neutral-800;
 }
 
+/*Sökruta*/
 .hero-search {
-  @apply flex justify-center items-center bg-white rounded-full px-1 py-2 border border-black mb-4 w-full max-w-md mx-auto;
-}
-
-.search-input {
-  @apply flex-grow text-black text-[12px] bg-transparent outline-none placeholder-gray-500;
-}
-
+    @apply flex justify-center items-center bg-white rounded-full px-2 py-1 border border-black mb-4 w-full max-w-xs mx-auto;
+  }
+  
+  .search-input {
+    @apply flex-grow italic text-black text-xs bg-transparent outline-none placeholder-gray-500;
+  }
+  
+  /* Populära skills */
+  .popular-skills-wrapper {
+    @apply flex flex-col items-center text-center mt-4;
+  }
+  
+  .popular-skills-label {
+    @apply text-xs text-gray-400 font-medium mb-2;
+  }
+  
+  .popular-skills-list {
+    @apply flex flex-wrap justify-center gap-2;
+  }
+  
+  .popular-skill {
+    @apply bg-[#ccd6d6] text-gray-600 text-xs px-2 py-[2px] rounded-full shadow-sm;
+  }
+  
+  /*Trusted freelancer*/
 .freelancer-card {
-  @apply bg-white rounded-xl p-4 max-w-xs mx-auto flex items-center justify-between border border-black;
+  @apply bg-white rounded-xl p-4 mt-12 max-w-xs mx-auto flex items-center justify-between border border-black;
 }
 
 .freelancer-text {
