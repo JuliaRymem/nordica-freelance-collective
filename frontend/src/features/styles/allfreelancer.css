@@ -1,65 +1,96 @@
 @import "tailwindcss";
 
 @layer components {
-  .background { 
-    background: #B2c4c5;
-     @apply text-black p-4 rounded;
-}
+  .background {
+    background: #b2c4c5;
+    @apply text-black p-4 rounded;
+  }
 
-.headerText { 
-    @apply text-center my-12
-}
-.ourFreelancer {
-@apply text-4xl font-extrabold text-gray-900
-}
+  .headerText {
+    @apply text-center;
+  }
+  .ourFreelancer {
+    @apply text-3xl font-extrabold text-gray-900;
+  }
 
-.freelancer {
- @apply text-blue-600
-}
-.headerP {
-  @apply  mt-2 text-gray-600 m-5
-}
+  .freelancer {
+    @apply text-blue-600;
+  }
+  .headerP {
+    @apply mt-2 text-gray-600 m-5;
+  }
 
-.freelancerContainer {
-    @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8
+  .freelancerContainer {
+    @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8;
+  }
+
+  .freelancerId {
+    @apply bg-white p-4 rounded-xl shadow-xl hover:scale-105 transition;
+  }
+
+  .freelancerImage {
+    @apply w-26 h-26 object-cover rounded-lg mx-auto mb-4;
+  }
+
+  .freelancerName {
+    @apply text-2xl font-semibold text-center;
+  }
+
+  .freelancerTitle {
+    @apply text-sm text-gray-800 text-center mb-2 font-bold;
+  }
+
+  .category {
+    @apply text-sm text-gray-500 text-center mb-2;
+  }
+
+  .categoryText {
+    @apply text-gray-600 font-bold;
+  }
+
+  .skills {
+    @apply text-sm text-gray-500 text-center;
+  }
+
+  .skillsText {
+    @apply text-gray-600 font-bold;
+  }
+
+  .readMoreBtn {
+    @apply bg-blue-200 px-5 p-1 text-lg hover:bg-blue-400 hover:text-white rounded-xl mt-5;
+  }
+
+  /* STYLING SÖKFUNKTION */
+
+  .searchBar {
+    @apply flex justify-center mt-1 mb-3;
+  }
+
+  .searchIcon {
+    @apply relative;
+  }
+
+  .iconLeft {
+    @apply absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 w-5 h-5;
+  }
+
+  .bar {
+    @apply pl-10 pr-20 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ffffff53C];
+  }
+
+  .iconRight {
+    @apply absolute right-3 top-1/2 -translate-y-1/2 flex items-center space-x-2;
+  }
+
+  .micIcon {
+    @apply text-gray-400 w-5 h-5;
+  }
+
+  .arrowRight {
+    @apply text-gray-400 cursor-pointer;
+  }
+
+  .noResult {
+    @apply text-center mt-2 text-lg text-gray-600;
+  }
 }
-
-.freelancerId {
-    @apply bg-white p-4 rounded-xl shadow-xl hover:scale-105 transition
-}
-
-
-.freelancerImage {
-   @apply w-26 h-26 object-cover rounded-lg mx-auto mb-4
-}
-
-.freelancerName{
-  @apply  text-2xl font-semibold text-center
-}
-
-.freelancerTitle{
-    @apply text-sm text-gray-800 text-center mb-2 font-bold
-}
-
-.category {
-    @apply text-sm text-gray-500 text-center mb-2
-}
-
-.categoryText {
-@apply text-gray-600 font-bold
-}
-
-.skills {
-   @apply text-sm text-gray-500 text-center 
-}
-
-.skillsText {
-    @apply text-gray-600 font-bold
-}
-
-.readMoreBtn{
-    @apply bg-blue-200 px-4 p-2 text-xl hover:bg-blue-400 hover:text-white rounded-xl mt-5
-}
-
-}
-
