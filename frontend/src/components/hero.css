@@ -2,10 +2,7 @@
 
 /* --- Hero Container --- */
 .hero-container {
-  @apply min-h-screen bg-[#b3c4c5] text-white px-6 py-10 font-sans flex flex-col justify-between;
-  background: linear-gradient(135deg, #b3c4c5 0%, #8fa3a4 100%);
-  /* Lägg till subtil gradient för mer djup */
-  transition: background 0.5s ease;
+  @apply min-h-screen bg-gradient-to-br from-[#b3c4c5] to-[#8fa3a4] text-white px-6 py-10 font-sans flex flex-col justify-between transition-all duration-500;
 }
 
 /* --- Top Bar --- */
@@ -23,31 +20,20 @@
 }
 
 .hero-nav-link {
-  @apply text-gray-800 text-sm font-medium tracking-wide transition-colors duration-200;
-}
-.hero-nav-link:hover {
-  @apply text-amber-500;
+  @apply text-gray-800 text-sm font-medium tracking-wide transition-colors duration-200 hover:text-amber-500;
 }
 
-/* --- Menu Icon (for mobile) --- */
+/* --- Menu Icon --- */
 .hero-menu-icon {
-  @apply text-black h-8 w-8 sm:h-10 sm:w-10 cursor-pointer transition-colors duration-200;
+  @apply text-black h-8 w-8 sm:h-10 sm:w-10 cursor-pointer transition-colors duration-200 hover:text-amber-400;
 }
-.hero-menu-icon:hover {
-  @apply text-amber-400;
-}
+
 /* --- Hero Heading --- */
 .hero-heading {
-  @apply text-5xl md:text-6xl font-extrabold leading-tight text-center mb-8 drop-shadow-lg;
+  @apply text-5xl md:text-6xl font-extrabold leading-tight text-center mb-8 drop-shadow-lg px-4;
   text-shadow: 5px 3px 15px rgba(0, 0, 0, 0.75);
   letter-spacing: 0.05em;
   transition: transform 0.3s ease;
-}
-
-@media (max-width: 430px) {
-  .hero-heading {
-    @apply text-3xl px-4;
-  }
 }
 
 /* --- Buttons Section --- */
@@ -61,12 +47,10 @@
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-/* Ljus knapp – "Log In" */
 .btn-login {
   @apply bg-white text-gray-800 border border-gray-300 hover:bg-[#f4f4f4] hover:shadow-lg;
 }
 
-/* Mörk knapp – "Join Us" */
 .btn-join {
   @apply bg-[#222] text-white border border-black hover:bg-neutral-900 hover:shadow-lg;
 }
@@ -76,16 +60,13 @@
   @apply flex items-center bg-[#edf3f3] rounded-full px-6 py-3 border border-gray-300 w-full max-w-md mx-auto mb-1 shadow-md hover:shadow-lg transition-shadow duration-300;
 }
 
-/* Inputfältet */
 .search-input {
   @apply flex-grow italic text-gray-700 text-sm bg-transparent outline-none placeholder-gray-400;
 }
 
-/* Sökikon */
 .search-icon {
   @apply text-gray-500 mr-2 h-5 w-5;
 }
-
 
 /* --- Popular Skills --- */
 .popular-skills-wrapper {
@@ -104,29 +85,34 @@
   @apply bg-[#ccd6d6] text-gray-700 text-xs px-3 py-1 rounded-full shadow-md;
 }
 
+/* --- Wrapper för centrerad placering --- */
+.popular-services-wrapper {
+  @apply min-h-screen flex justify-center items-center px-4;
+}
+
 /* --- Popular Services --- */
 .popular-services-section {
-  @apply bg-white rounded-3xl p-7 mt-16 mb-28 w-full max-w-7xl shadow-2xl flex flex-col justify-center items-center text-center transition-shadow;
+  @apply bg-white rounded-3xl p-7 w-full max-w-6xl shadow-2xl flex flex-col justify-center items-center text-center transition-shadow;
 }
 
 .popular-services-header {
-  @apply mb-5;
+  @apply mb-2;
 }
 
 .popular-services-title {
-  @apply text-4xl font-extrabold mb-3 text-gray-800;
+  @apply text-4xl font-extrabold text-gray-800 mb-3 leading-snug;
 }
 
 .popular-services-subtitle {
-  @apply text-gray-500 text-base max-w-xl mx-auto;
+  @apply text-base text-gray-500 max-w-xl mx-auto;
 }
 
 .popular-services-grid {
-  @apply grid md:grid-cols-3 gap-12 max-w-7xl mx-auto mt-10;
+  @apply grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-10 w-full;
 }
 
 .popular-service-card {
-  @apply bg-[#edf3f3] rounded-3xl shadow-md p-8 hover:shadow-lg transition-all duration-400 cursor-pointer;
+  @apply bg-[#edf3f3] rounded-3xl shadow-md p-8 hover:shadow-lg transition-transform duration-300 cursor-pointer;
   transform-style: preserve-3d;
   will-change: transform;
 }
@@ -142,30 +128,26 @@
   @apply text-sm text-gray-600 leading-relaxed;
 }
 
-/* --- Trusted - wrapper - sektion --- */
+
+/* --- Trusted Section --- */
 .trusted-combined-wrapper {
-  @apply w-full max-w-6xl mx-auto mt-20 px-4 mb-28; /* lägg till mb-28 för utrymme under */
+  @apply w-full max-w-6xl mx-auto mt-10 px-4 mb-28;
 }
 
-/* --- Bildsektion --- */
 .trusted-image-section {
   @apply relative w-full rounded-3xl overflow-hidden shadow-2xl;
-  height: 400px; /* justera höjd efter behov */
+  height: 400px;
 }
 
-/* Bild som bakgrund */
 .trusted-image-background {
   @apply w-full h-full object-cover;
 }
 
-/* Kortet ovanpå bilden */
 .trusted-card-overlay {
-  @apply absolute left-1/2 transform -translate-x-1/2 
+  @apply absolute left-1/2 transform -translate-x-1/2 bottom-[-10px]
     bg-white rounded-3xl p-6 w-[90%] max-w-2xl shadow-xl flex flex-col items-center text-center;
-  bottom: -10px; /* Nytt! skjuter ner kortet under bilden */
 }
 
-/* Kortinnehåll */
 .trusted-title {
   @apply text-xl font-bold text-gray-800 mb-1;
 }
@@ -183,8 +165,7 @@
 }
 
 .avatar-img {
-  @apply w-12 h-12 rounded-full border-4 border-white object-cover shadow-md;
-  transition: transform 0.3s ease;
+  @apply w-12 h-12 rounded-full border-4 border-white object-cover shadow-md transition-transform duration-300;
 }
 .avatar-img:hover {
   transform: scale(1.2) translateY(-5px);
