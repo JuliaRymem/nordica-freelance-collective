@@ -10,20 +10,32 @@
 
 /* --- Top Bar --- */
 .hero-topbar {
-  @apply flex justify-between items-center mb-4;
+  @apply flex justify-between items-center mb-4 px-4 sm:px-6 lg:px-8;
 }
 
 .hero-logo {
-  @apply h-32 rounded-full shadow-lg transition-transform duration-300 ease-in-out;
+  @apply h-24 sm:h-28 md:h-32 rounded-full shadow-lg transition-transform duration-300 ease-in-out;
 }
 
+/* --- Navigation Links --- */
+.hero-nav-links {
+  @apply hidden md:flex space-x-6 items-center;
+}
+
+.hero-nav-link {
+  @apply text-gray-800 text-sm font-medium tracking-wide transition-colors duration-200;
+}
+.hero-nav-link:hover {
+  @apply text-amber-500;
+}
+
+/* --- Menu Icon (for mobile) --- */
 .hero-menu-icon {
-  @apply text-black h-10 w-16 cursor-pointer transition-colors duration-200;
+  @apply text-black h-8 w-8 sm:h-10 sm:w-10 cursor-pointer transition-colors duration-200;
 }
 .hero-menu-icon:hover {
   @apply text-amber-400;
 }
-
 /* --- Hero Heading --- */
 .hero-heading {
   @apply text-5xl md:text-6xl font-extrabold leading-tight text-center mb-8 drop-shadow-lg;
@@ -89,24 +101,7 @@
 }
 
 .popular-skill {
-  @apply bg-[#ccd6d6] text-gray-700 text-xs px-3 py-1 rounded-full shadow-md hover:bg-[#b5c2c3] transition-colors duration-300 cursor-pointer;
-}
-
-/* --- Links Section --- */
-.links-section {
-  @apply flex justify-center space-x-2 mt-16 mb-20 flex-wrap gap-1;
-}
-
-.link-card {
-  @apply bg-white rounded-3xl p-3 shadow-xl cursor-pointer transition-transform transform hover:scale-105 hover:shadow-2xl max-w-xs text-center;
-}
-
-.link-title {
-  @apply text-xl font-bold text-gray-800 mb-3;
-}
-
-.link-description {
-  @apply text-sm text-gray-600 leading-relaxed;
+  @apply bg-[#ccd6d6] text-gray-700 text-xs px-3 py-1 rounded-full shadow-md;
 }
 
 /* --- Popular Services --- */

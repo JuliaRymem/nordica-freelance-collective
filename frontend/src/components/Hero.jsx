@@ -5,7 +5,6 @@ import HeroHeading from "./HeroHeading";
 import HeroButtons from "./HeroButtons";
 import HeroSearch from "./HeroSearch";
 import PopularSkills from "./PopularSkills";
-import PageLinks from "./PageLinks";
 import PopularServices from "./PopularServices";
 import TrustedFreelancers from "./TrustedFreelancers";
 import Footer from "./Footer";
@@ -18,7 +17,6 @@ function Hero() {
       <HeroButtons />
       <HeroSearch />
       <PopularSkills />
-      <PageLinks />
       <PopularServices />
       <TrustedFreelancers />
       <Footer />
