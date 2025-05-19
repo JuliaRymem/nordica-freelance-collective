@@ -1,3 +1,4 @@
+import Hero from "./components/Hero";
 import { QueryClientProvider, QueryClient } from "@tanstack/react-query";
 import SinglePageProject from "./features/products/pages/SinglePageProject";
 import FreelancerList from "./features/products/pages/userProfilePage";
@@ -8,6 +9,13 @@ const queryClient = new QueryClient();
 
 function App() {
   return (
+
+    <QueryClientProvider client={queryClient}>
+      <Hero />
+
+      <div>
+        <h1>Våra frilansare</h1>
+        <FreelancerList />
     <>
       <QueryClientProvider client={queryClient}>
         <Navbar/>
@@ -20,9 +28,12 @@ function App() {
           
         </div>
 
-        <SinglePageProject />
-      </QueryClientProvider>
-    </>
+        <h2>Testa FreelancerSearchList</h2>
+        <FreelancerSearchList />
+      </div>
+
+      <SinglePageProject />
+    </QueryClientProvider>
   );
 }
 
