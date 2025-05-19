@@ -37,9 +37,7 @@ const FreelancerSearchList = () => {
             <p>{freelancer.title?.titleName}</p>
             <div>
               {freelancer.skills?.map((skill, index) => (
-                <span key={index}>
-                  {skill.skillName}
-                </span>
+                <span key={index}>{skill.skillName}</span>
               ))}
             </div>
             {freelancer.picture?.asset?.url && (

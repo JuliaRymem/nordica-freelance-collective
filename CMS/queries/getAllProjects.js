@@ -23,7 +23,7 @@ title->{titleName},
 skills[]->{skillName},
 picture {
 asset->{url}
-}}`;
+}}`
 
 // Hämta alla testimonials (recensioner)
 export const getTestimonials = `
@@ -32,4 +32,4 @@ export const getTestimonials = `
   rating,
   comment,
   freelancer->{freelancerName}
-}`;
+}`
