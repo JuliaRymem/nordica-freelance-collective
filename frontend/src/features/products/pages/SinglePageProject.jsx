@@ -6,7 +6,7 @@ import ProjectsSingle from "../components/ProjectsSingle";
 import TestimonialSingle from "../components/TestimonialSingle";
 import TestimonialModal from "../components/testimonial/TestimonialModal";
 import "../../styles/singlepageproject.css";
-import useParams from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 const SinglePageProject = () => {
   const slug = useParams();
