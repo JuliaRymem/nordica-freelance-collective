@@ -1,4 +1,6 @@
 import Hero from "./components/Hero";
+import FreelancerList from "./features/products/pages/userProfilePage";
+import Footer from "./components/Footer";
 import { QueryClientProvider, QueryClient } from "@tanstack/react-query";
 import SinglePageProject from "./features/products/pages/SinglePageProject";
 import FreelancerList from "./features/products/pages/userProfilePage";
@@ -33,6 +35,10 @@ function App() {
       </div>
 
       <SinglePageProject />
+ <Hero />
+      <FreelancerList />
+      <Footer/>
+    
     </QueryClientProvider>
   );
 }
