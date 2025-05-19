@@ -13,7 +13,7 @@ function App() {
     <QueryClientProvider client={queryClient}>
       <Hero />
 
-      <Navbar />
+     {/* <Navbar />
 
       {/* <h2>Testa FreelancerSearchList</h2> /}
       <FreelancerSearchList />
