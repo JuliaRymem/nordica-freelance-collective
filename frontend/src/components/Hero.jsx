@@ -7,7 +7,6 @@ import HeroSearch from "./HeroSearch";
 import PopularSkills from "./PopularSkills";
 import PopularServices from "./PopularServices";
 import TrustedFreelancers from "./TrustedFreelancers";
-import Footer from "./Footer";
 
 function Hero() {
   return (
@@ -19,7 +18,6 @@ function Hero() {
       <PopularSkills />
       <PopularServices />
       <TrustedFreelancers />
-      <Footer />
     </div>
   );
 }
