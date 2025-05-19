@@ -1,103 +1,177 @@
 @import "tailwindcss";
 
+/* --- Hero Container --- */
 .hero-container {
-  @apply min-h-screen bg-[#b3c4c5] text-white px-5 py-9 font-sans;
+  @apply min-h-screen bg-[#b3c4c5] text-white px-6 py-10 font-sans flex flex-col justify-between;
+  background: linear-gradient(135deg, #b3c4c5 0%, #8fa3a4 100%);
+  /* Lägg till subtil gradient för mer djup */
+  transition: background 0.5s ease;
 }
 
+/* --- Top Bar --- */
 .hero-topbar {
-  @apply flex justify-between items-center mb-1;
+  @apply flex justify-between items-center mb-4;
 }
 
 .hero-logo {
-  @apply h-30 rounded-full;
+  @apply h-32 rounded-full shadow-lg transition-transform duration-300 ease-in-out;
 }
 
 .hero-menu-icon {
-  @apply text-black h-10 w-15;
+  @apply text-black h-10 w-16 cursor-pointer transition-colors duration-200;
 }
-/*Text i header*/
+.hero-menu-icon:hover {
+  @apply text-amber-400;
+}
+
+/* --- Hero Heading --- */
 .hero-heading {
-    @apply text-4xl md:text-5xl font-semibold leading-snug text-white text-center mb-6;
-    text-shadow: 5px 3px 10px rgba(0, 0, 0, 0.7); /* Funkar ej */
+  @apply text-5xl md:text-6xl font-extrabold leading-tight text-center mb-8 drop-shadow-lg;
+  text-shadow: 5px 3px 15px rgba(0, 0, 0, 0.75);
+  letter-spacing: 0.05em;
+  transition: transform 0.3s ease;
 }
 
-  @media (max-width: 430px) {
-    .hero-heading {
-      @apply text-2xl;
-    }
+@media (max-width: 430px) {
+  .hero-heading {
+    @apply text-3xl px-4;
   }
+}
 
+/* --- Buttons Section --- */
 .hero-buttons {
-  @apply flex justify-center space-x-4 mb-9;
+  @apply flex justify-center space-x-6 mb-10;
 }
 
-.btn-login {
-  @apply px-6 py-1 rounded-full border border-black bg-white text-black font-semibold text-[12px] hover:bg-amber-50;
-}
-
+.btn-login,
 .btn-join {
-  @apply px-6 py-3 rounded-full border border-black bg-black text-white font-semibold text-[12px] hover:bg-neutral-800;
+  @apply px-8 py-3 rounded-full font-semibold text-sm transition-all duration-300 shadow-md;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-/*Sökruta*/
+/* Ljus knapp – "Log In" */
+.btn-login {
+  @apply bg-white text-gray-800 border border-gray-300 hover:bg-[#f4f4f4] hover:shadow-lg;
+}
+
+/* Mörk knapp – "Join Us" */
+.btn-join {
+  @apply bg-[#222] text-white border border-black hover:bg-neutral-900 hover:shadow-lg;
+}
+
+/* --- Search Bar --- */
 .hero-search {
-    @apply flex justify-center items-center bg-white rounded-full px-2 py-1 border border-black mb-4 w-full max-w-xs mx-auto;
-  }
-  
-  .search-input {
-    @apply flex-grow italic text-black text-xs bg-transparent outline-none placeholder-gray-500;
-  }
-  
-  /* Populära skills */
-  .popular-skills-wrapper {
-    @apply flex flex-col items-center text-center mt-4;
-  }
-  
-  .popular-skills-label {
-    @apply text-xs text-gray-400 font-medium mb-2;
-  }
-  
-  .popular-skills-list {
-    @apply flex flex-wrap justify-center gap-2;
-  }
-  
-  .popular-skill {
-    @apply bg-[#ccd6d6] text-gray-600 text-xs px-2 py-[2px] rounded-full shadow-sm;
-  }
-  
-  /*Trusted freelancer*/
-.freelancer-card {
-  @apply bg-white rounded-xl p-4 mt-20 max-w-xs mx-auto flex items-center justify-between border border-black ;
+  @apply flex items-center bg-[#edf3f3] rounded-full px-6 py-3 border border-gray-300 w-full max-w-md mx-auto mb-1 shadow-md hover:shadow-lg transition-shadow duration-300;
 }
 
-.freelancer-text {
-  @apply text-black text-sm font-light;
+/* Inputfältet */
+.search-input {
+  @apply flex-grow italic text-gray-700 text-sm bg-transparent outline-none placeholder-gray-400;
 }
 
-.freelancer-stars {
-  @apply text-yellow-500 text-sm;
+/* Sökikon */
+.search-icon {
+  @apply text-gray-500 mr-2 h-5 w-5;
 }
 
-.freelancer-avatars {
-  @apply flex -space-x-3;
+
+/* --- Popular Skills --- */
+.popular-skills-wrapper {
+  @apply flex flex-col items-center text-center mt-1 space-y-2;
 }
 
-.avatar {
-  @apply w-6 h-6 rounded-full border-2 border-white;
+.popular-skills-label {
+  @apply text-xs text-gray-400 font-medium tracking-wide uppercase;
 }
 
-.avatar-pink {
-  @apply bg-pink-300;
+.popular-skills-list {
+  @apply flex flex-wrap justify-center gap-3;
 }
 
-.avatar-blue {
-  @apply bg-blue-300;
+.popular-skill {
+  @apply bg-[#ccd6d6] text-gray-700 text-xs px-3 py-1 rounded-full shadow-md hover:bg-[#b5c2c3] transition-colors duration-300 cursor-pointer;
 }
 
-.avatar-yellow {
-  @apply bg-yellow-300;
+/* --- Links Section --- */
+.links-section {
+  @apply flex justify-center space-x-2 mt-16 mb-20 flex-wrap gap-1;
 }
 
-.avatar-purple {
-  @apply bg-purple-300;
+.link-card {
+  @apply bg-white rounded-3xl p-3 shadow-xl cursor-pointer transition-transform transform hover:scale-105 hover:shadow-2xl max-w-xs text-center;
+}
+
+.link-title {
+  @apply text-xl font-bold text-gray-800 mb-3;
+}
+
+.link-description {
+  @apply text-sm text-gray-600 leading-relaxed;
+}
+
+/* --- Popular Services --- */
+.popular-services-section {
+  @apply bg-white rounded-3xl p-8 mt-16 mb-28 w-full max-w-7xl shadow-2xl flex flex-col items-center text-center transition-shadow;
+}
+
+.popular-services-header {
+  @apply mb-5;
+}
+
+.popular-services-title {
+  @apply text-4xl font-extrabold mb-3 text-gray-800;
+}
+
+.popular-services-subtitle {
+  @apply text-gray-500 text-base max-w-xl mx-auto;
+}
+
+.popular-services-grid {
+  @apply grid md:grid-cols-3 gap-12 max-w-7xl mx-auto mt-10;
+}
+
+.popular-service-card {
+  @apply bg-[#edf3f3] rounded-3xl shadow-md p-8 hover:shadow-lg transition-all duration-400 cursor-pointer;
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+.popular-service-card:hover {
+  transform: translateY(-8px) scale(1.03);
+}
+
+.popular-service-title {
+  @apply text-2xl font-semibold mb-3 text-gray-800;
+}
+
+.popular-service-description {
+  @apply text-sm text-gray-600 leading-relaxed;
+}
+
+/* --- Trusted Card --- */
+.trusted-card {
+  @apply bg-white rounded-3xl p-8 mt-16 mb-28 w-full max-w-2xl shadow-2xl flex flex-col items-center text-center;
+}
+
+.trusted-title {
+  @apply text-xl font-bold text-gray-800 mb-2;
+}
+
+.trusted-stars {
+  @apply text-yellow-400 text-lg mb-1;
+}
+
+.trusted-subtext {
+  @apply text-sm text-gray-500 mt-1 mb-6;
+}
+
+.trusted-avatars {
+  @apply flex -space-x-4 mt-3 justify-center;
+}
+
+.avatar-img {
+  @apply w-12 h-12 rounded-full border-4 border-white object-cover shadow-md;
+  transition: transform 0.3s ease;
+}
+.avatar-img:hover {
+  transform: scale(1.2) translateY(-5px);
 }
