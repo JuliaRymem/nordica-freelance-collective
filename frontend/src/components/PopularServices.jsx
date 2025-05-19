@@ -2,11 +2,11 @@ import React from "react";
 
 const services = [
   {
-    title: "Web Design",
+    title: "Webbdesign",
     description: "Modern, responsiv och användarvänlig design för alla plattformar.",
   },
   {
-    title: "UI/UX Design",
+    title: "UI/UX- design",
     description: "Fokus på användarupplevelse, interaktion och konvertering.",
   },
   {
@@ -19,9 +19,9 @@ export default function PopularServices() {
   return (
     <section className="popular-services-section">
       <div className="popular-services-header">
-        <h2 className="popular-services-title">Popular Services</h2>
+        <h2 className="popular-services-title">Populära tjänster</h2>
         <p className="popular-services-subtitle">
-          Våra mest efterfrågade kompetenser just nu.
+          Våra mest efterfrågade kompetenser just nu
         </p>
       </div>
       <div className="popular-services-grid">
