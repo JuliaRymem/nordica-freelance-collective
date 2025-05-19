@@ -36,55 +36,35 @@ const FreelancerSearchList = () => {
           Sökresultat för <span className="freelancer">{query}</span>
         </h1>
         <SearchBar onSearch={setQuery} />
-
-        {/* Visa meddelande ENDAST om användaren har sökt och det inte finns resultat */}
-        {hasSearched && freelancers.length === 0 ? (
-          <p className="noResult">Inga resultat</p>
-        ) : (
-          <div className="freelancerContainer">
-            {freelancers.map((freelancer) => (
-              <div key={freelancer._id} className="freelancerId">
-                <img
-                  src={
-                    freelancer.image ||
-                    freelancer.picture?.asset?.url ||
-                    "/default.jpg"
-                  }
-                  alt={freelancer.freelancerName}
-                  className="freelancerImage"
-                />
-                <h2 className="freelancerName">{freelancer.freelancerName}</h2>
-                <p className="freelancerTitle">{freelancer.title?.titleName}</p>
-                <p className="skills">
-                  <span className="skillsText">Skills:</span>{" "}
-                  {freelancer.skills?.map((skill) => skill.skillName).join(", ")}
-                </p>
-                <button className="readMoreBtn">Läs mer</button>
-              </div>
-            ))}
-    <div>
-      <SearchBar onSearch={setQuery} />
-      {freelancers.length === 0 ? (
-        <p>No results</p>
-      ) : (
-        freelancers.map((freelancer) => (
-          <div key={freelancer._id}>
-            <h2>{freelancer.freelancerName}</h2>
-            <p>{freelancer.title?.titleName}</p>
-            <div>
-              {freelancer.skills?.map((skill, index) => (
-                <span key={index}>{skill.skillName}</span>
-              ))}
-            </div>
-            {freelancer.picture?.asset?.url && (
-              <img
-                src={freelancer.picture.asset.url}
-                alt={freelancer.freelancerName}
-              />
-            )}
-          </div>
-        )}
       </div>
+
+      {/* Visa meddelande ENDAST om användaren har sökt och det inte finns resultat */}
+      {hasSearched && freelancers.length === 0 ? (
+        <p className="noResult">Inga resultat</p>
+      ) : (
+        <div className="freelancerContainer">
+          {freelancers.map((freelancer) => (
+            <div key={freelancer._id} className="freelancerId">
+              <img
+                src={
+                  freelancer.image ||
+                  freelancer.picture?.asset?.url ||
+                  "/default.jpg"
+                }
+                alt={freelancer.freelancerName}
+                className="freelancerImage"
+              />
+              <h2 className="freelancerName">{freelancer.freelancerName}</h2>
+              <p className="freelancerTitle">{freelancer.title?.titleName}</p>
+              <p className="skills">
+                <span className="skillsText">Skills:</span>{" "}
+                {freelancer.skills?.map((skill) => skill.skillName).join(", ")}
+              </p>
+              <button className="readMoreBtn">Läs mer</button>
+            </div>
+          ))}
+        </div>
+      )}
     </div>
   );
 };
