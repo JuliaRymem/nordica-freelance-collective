@@ -13,25 +13,15 @@ function App() {
     <QueryClientProvider client={queryClient}>
       <Hero />
 
-      <div>
-        <h1>Våra frilansare</h1>
-        <FreelancerList />
+      <Navbar />
 
-        <Navbar />
-        <div>
-          {/* <h2>Testa FreelancerSearchList</h2> */}
-          <FreelancerSearchList />
-          {/* <h1>Våra frilansare</h1> */}
-          <FreelancerList />
-        </div>
-
-        <h2>Testa FreelancerSearchList</h2>
-        <FreelancerSearchList />
-      </div>
-
-      <SinglePageProject />
-      <Hero />
+      {/* <h2>Testa FreelancerSearchList</h2> /}
+      <FreelancerSearchList />
+      {/ <h1>Våra frilansare</h1> /}
       <FreelancerList />
+
+      {/ <SinglePageProject /> */}
+
       <Footer />
     </QueryClientProvider>
   );
