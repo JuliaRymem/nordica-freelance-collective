@@ -42,27 +42,37 @@ const FreelancerSearchList = () => {
       {hasSearched && freelancers.length === 0 ? (
         <p className="noResult">Inga resultat</p>
       ) : (
-        <div className="freelancerContainer">
-          {freelancers.map((freelancer) => (
-            <div key={freelancer._id} className="freelancerId">
-              <img
-                src={
-                  freelancer.image ||
-                  freelancer.picture?.asset?.url ||
-                  "/default.jpg"
-                }
-                alt={freelancer.freelancerName}
-                className="freelancerImage"
-              />
-              <h2 className="freelancerName">{freelancer.freelancerName}</h2>
-              <p className="freelancerTitle">{freelancer.title?.titleName}</p>
-              <p className="skills">
-                <span className="skillsText">Skills:</span>{" "}
-                {freelancer.skills?.map((skill) => skill.skillName).join(", ")}
-              </p>
-              <button className="readMoreBtn">Läs mer</button>
+        <div className="background">
+          <div className="headerText">
+            <div className="freelancerContainer">
+              {freelancers.map((freelancer) => (
+                <div key={freelancer._id} className="freelancerId">
+                  <img
+                    src={
+                      freelancer.image ||
+                      freelancer.picture?.asset?.url ||
+                      "/default.jpg"
+                    }
+                    alt={freelancer.freelancerName}
+                    className="freelancerImage"
+                  />
+                  <h2 className="freelancerName">
+                    {freelancer.freelancerName}
+                  </h2>
+                  <p className="freelancerTitle">
+                    {freelancer.title?.titleName}
+                  </p>
+                  <p className="skills">
+                    <span className="skillsText">Skills:</span>{" "}
+                    {freelancer.skills
+                      ?.map((skill) => skill.skillName)
+                      .join(", ")}
+                  </p>
+                  <button className="readMoreBtn">Läs mer</button>
+                </div>
+              ))}
             </div>
-          ))}
+          </div>
         </div>
       )}
     </div>
