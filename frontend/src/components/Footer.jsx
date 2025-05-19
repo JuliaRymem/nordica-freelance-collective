@@ -4,7 +4,7 @@ import { Facebook, Twitter, Instagram } from "lucide-react";
 const Footer = () => {
   return (
     <footer className="w-full bg-[#e6eded] text-gray-700 mt-48 px-6 py-12 shadow-inner">
-      <div className="max-w-6xl mx-auto flex flex-col items-center space-y-6">
+      <div className="max-w-7xl mx-auto flex flex-col items-center space-y-6">
         <br />
         {/* Ikoner */}
         <div className="flex gap-10">
