@@ -7,7 +7,7 @@ export default function HeroSearch() {
       <Search className="text-black mr-2 w-5 h-5" />
       <input
         type="text"
-        placeholder="Search for any services..."
+        placeholder="Vad söker du efter?..."
         className="search-input"
       />
       <Mic className="text-black w-5 h-5 mx-2" />
