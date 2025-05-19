@@ -1,20 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 import getSingleProject from "../../../../../CMS/queries/getSingleProject";
 import FreelancerSinlge from "../components/FreelancerSinlge";
 import ProjectsSingle from "../components/ProjectsSingle";
 import TestimonialSingle from "../components/TestimonialSingle";
+import TestimonialModal from "../components/testimonial/TestimonialModal";
 import "../../styles/singlepageproject.css";
+import { useParams } from "react-router-dom";
 
 const SinglePageProject = () => {
-  // const slug = useParams();
+  const slug = useParams();
+  const [modalOpen, setModalOpen] = useState(false);
 
   const { data, isLoading, isError } = useQuery({
     queryKey: ["singleProject"],
-    queryFn: () => getSingleProject("maja-holmgren"),
+    queryFn: () => getSingleProject(`"${slug}"`),
   });
-
-  console.log(data);
 
   if (isLoading) {
     return <p>Loading...</p>;
@@ -28,11 +29,25 @@ const SinglePageProject = () => {
       <FreelancerSinlge data={data[0]?.freelancer} />
       <hr className="md:hidden" />
 
-      <section className="lg:flex flex-row lg:gap-5">
+      <section className="lg:flex flex-col lg:gap-5">
         <ProjectsSingle data={data[0]?.projects} />
         <hr className="md:hidden mb-10" />
-        <TestimonialSingle data={data[0]?.testimonial} />
+        <div className="md:mt-4">
+          <TestimonialSingle data={data[0]?.testimonial} />
+        </div>
       </section>
+
+      <button
+        onClick={() => setModalOpen(true)}
+        className="shadow-xl rounded-md p-3 max-w-md mx-auto cursor-pointer bg-gradient-turquoise-blue text-whitetext-shadow-lg hover:text-white/40 transition-transform duration-300 hover:scale-110"
+      >
+        Skriv en Testimonial
+      </button>
+      <TestimonialModal
+        freelancerId={data[0]?.freelancer?._id}
+        isOpen={modalOpen}
+        onClose={() => setModalOpen(false)}
+      />
     </main>
   );
 };

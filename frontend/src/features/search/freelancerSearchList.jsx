@@ -62,6 +62,26 @@ const FreelancerSearchList = () => {
                 <button className="readMoreBtn">Läs mer</button>
               </div>
             ))}
+    <div>
+      <SearchBar onSearch={setQuery} />
+      {freelancers.length === 0 ? (
+        <p>No results</p>
+      ) : (
+        freelancers.map((freelancer) => (
+          <div key={freelancer._id}>
+            <h2>{freelancer.freelancerName}</h2>
+            <p>{freelancer.title?.titleName}</p>
+            <div>
+              {freelancer.skills?.map((skill, index) => (
+                <span key={index}>{skill.skillName}</span>
+              ))}
+            </div>
+            {freelancer.picture?.asset?.url && (
+              <img
+                src={freelancer.picture.asset.url}
+                alt={freelancer.freelancerName}
+              />
+            )}
           </div>
         )}
       </div>
