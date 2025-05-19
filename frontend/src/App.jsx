@@ -8,21 +8,19 @@ const queryClient = new QueryClient();
 
 function App() {
   return (
-    <>
+    <QueryClientProvider client={queryClient}>
       <Hero />
 
-      <QueryClientProvider client={queryClient}>
-        <div>
-          <h1>Våra frilansare</h1>
-          <FreelancerList />
+      <div>
+        <h1>Våra frilansare</h1>
+        <FreelancerList />
 
-          <h2>Testa FreelancerSearchList</h2>
-          <FreelancerSearchList />
-        </div>
+        <h2>Testa FreelancerSearchList</h2>
+        <FreelancerSearchList />
+      </div>
 
-        <SinglePageProject />
-      </QueryClientProvider>
-    </>
+      <SinglePageProject />
+    </QueryClientProvider>
   );
 }
 
