@@ -17,7 +17,7 @@
 
 /* Navigationsknappar */
 .hero-nav-links {
-  @apply hidden md:flex space-x-10 items-center;
+  @apply flex space-x-6 items-center;
 }
 
 .hero-nav-link {
