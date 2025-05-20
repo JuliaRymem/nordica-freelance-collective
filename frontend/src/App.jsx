@@ -5,6 +5,7 @@ import { QueryClientProvider, QueryClient } from "@tanstack/react-query";
 import SinglePageProject from "./features/products/pages/SinglePageProject";
 import FreelancerSearchList from "./features/search/FreelancerSearchList";
 import HeroTopbar from "./components/HeroTopbar"; //
+import { Route, Routes } from "react-router-dom";
 
 const queryClient = new QueryClient();
 
@@ -13,20 +14,14 @@ function App() {
     <QueryClientProvider client={queryClient}>
       {/* Header */}
       <HeroTopbar />
-
-      {/* Hero-sektion */}
-      <Hero />
-
-      {/* Andra sektioner */}
-      <div>
-        <h1>Våra frilansare</h1>
-        <FreelancerList />
-
-
-        <FreelancerSearchList />
-        <SinglePageProject />
-      </div>
-
+      <Routes>
+        {/* Hero-sektion */}
+        <Route path="/" element={<Hero />} />
+        {/* Andra sektioner */}
+        <Route path="/freelancer" element={<FreelancerList />} />
+        <Route path="/freelancer/:slug" element={<SinglePageProject />} />
+        <Route path="/about" element={<h1>About page</h1>} />
+      </Routes>
       <Footer />
     </QueryClientProvider>
   );
