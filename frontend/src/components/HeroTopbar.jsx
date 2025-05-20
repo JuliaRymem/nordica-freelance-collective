@@ -9,10 +9,18 @@ export default function HeroTopbar() {
       <img src={logo} alt="Logo" className="hero-logo" />
 
       <nav className="hero-nav-links">
-        <Link to="/about" className="hero-nav-link">Om oss</Link>
-        <Link to="/services" className="hero-nav-link">Våra tjänster</Link>
-        <Link to="/services" className="hero-nav-link">Våra tjänster</Link>
-        <Link to="/contact" className="hero-nav-link">Kontakt</Link>
+        <Link to="/" className="hero-nav-link">
+          Hem
+        </Link>
+        <Link to="/about" className="hero-nav-link">
+          Om oss
+        </Link>
+        <Link to="/freelancer" className="hero-nav-link">
+          Våra Frilansare
+        </Link>
+        <Link to="/contact" className="hero-nav-link">
+          Kontakt
+        </Link>
       </nav>
 
       <Menu className="hero-menu-icon" />

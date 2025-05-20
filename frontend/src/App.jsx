@@ -4,23 +4,24 @@ import Footer from "./components/Footer";
 import { QueryClientProvider, QueryClient } from "@tanstack/react-query";
 import SinglePageProject from "./features/products/pages/SinglePageProject";
 import FreelancerSearchList from "./features/search/FreelancerSearchList";
-import Navbar from "../src/features/products/components/navbar";
+import HeroTopbar from "./components/HeroTopbar"; //
+import { Route, Routes } from "react-router-dom";
 
 const queryClient = new QueryClient();
 
 function App() {
   return (
     <QueryClientProvider client={queryClient}>
-      <Hero />
-
-      {/* {/* <Navbar />  */}
-
-      <FreelancerSearchList />
-
-      <FreelancerList />
-
-      {/* { <SinglePageProject /> } */}
-
+      {/* Header */}
+      <HeroTopbar />
+      <Routes>
+        {/* Hero-sektion */}
+        <Route path="/" element={<Hero />} />
+        {/* Andra sektioner */}
+        <Route path="/freelancer" element={<FreelancerList />} />
+        <Route path="/freelancer/:slug" element={<SinglePageProject />} />
+        <Route path="/about" element={<h1>About page</h1>} />
+      </Routes>
       <Footer />
     </QueryClientProvider>
   );
