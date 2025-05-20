@@ -9,19 +9,19 @@ import "../../styles/singlepageproject.css";
 import { useParams } from "react-router-dom";
 
 const SinglePageProject = () => {
-  const slug = useParams();
+  const { slug } = useParams();
   const [modalOpen, setModalOpen] = useState(false);
 
-  const { data, isLoading, isError } = useQuery({
+  const { data, isLoading, error } = useQuery({
     queryKey: ["singleProject"],
-    queryFn: () => getSingleProject(`"${slug}"`),
+    queryFn: () => getSingleProject(`${slug}`),
   });
 
   if (isLoading) {
     return <p>Loading...</p>;
   }
-  if (isError) {
-    return <p>Error... {isError.message}</p>;
+  if (error) {
+    return <p>Error... {error.message}</p>;
   }
 
   return (
