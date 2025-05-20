@@ -3,7 +3,7 @@
 /* Container - Hero */
 .hero-container {
   @apply min-h-screen bg-[#b3c4c5] text-white px-12 py-6 font-sans flex flex-col justify-between;
-  background: linear-gradient(135deg, #b3c4c5 0%, #8fa3a4 100%);
+  background: linear-gradient(135deg, #b3c4c5 0%, #b3c4c5 100%);
   transition: background 0.5s ease;
 }
 
