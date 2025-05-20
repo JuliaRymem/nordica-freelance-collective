@@ -27,7 +27,6 @@ function App() {
         <SinglePageProject />
       </div>
 
-      {/* Footer */}
       <Footer />
     </QueryClientProvider>
   );
