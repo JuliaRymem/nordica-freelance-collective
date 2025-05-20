@@ -4,22 +4,28 @@ import Footer from "./components/Footer";
 import { QueryClientProvider, QueryClient } from "@tanstack/react-query";
 import SinglePageProject from "./features/products/pages/SinglePageProject";
 import FreelancerSearchList from "./features/search/FreelancerSearchList";
-import Navbar from "../src/features/products/components/navbar";
+import HeroTopbar from "./components/HeroTopbar"; //
 
 const queryClient = new QueryClient();
 
 function App() {
   return (
     <QueryClientProvider client={queryClient}>
+      {/* Header */}
+      <HeroTopbar />
+
+      {/* Hero-sektion */}
       <Hero />
 
-      {/* {/* <Navbar />  */}
+      {/* Andra sektioner */}
+      <div>
+        <h1>Våra frilansare</h1>
+        <FreelancerList />
 
-      <FreelancerSearchList />
 
-      <FreelancerList />
-
-      {/* { <SinglePageProject /> } */}
+        <FreelancerSearchList />
+        <SinglePageProject />
+      </div>
 
       <Footer />
     </QueryClientProvider>

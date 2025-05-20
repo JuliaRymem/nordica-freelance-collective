@@ -1,6 +1,5 @@
 import React from "react";
 import "./hero.css";
-import HeroTopbar from "./HeroTopbar";
 import HeroHeading from "./HeroHeading";
 import HeroButtons from "./HeroButtons";
 import HeroSearch from "./HeroSearch";
@@ -10,15 +9,20 @@ import TrustedFreelancers from "./TrustedFreelancers";
 
 function Hero() {
   return (
-    <div className="hero-container">
-      <HeroTopbar />
-      <HeroHeading />
-      <HeroButtons />
-      <HeroSearch />
-      <PopularSkills />
-      <PopularServices />
-      <TrustedFreelancers />
-    </div>
+    <>
+
+      <div className="hero-container">
+        <HeroHeading />
+        <HeroButtons />
+        <HeroSearch />
+        <PopularSkills />
+        <PopularServices />
+        <TrustedFreelancers />
+      </div>
+
+      <Footer />
+    </>
+
   );
 }
 
