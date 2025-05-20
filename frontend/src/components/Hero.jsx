@@ -11,16 +11,20 @@ import Footer from "./Footer";
 
 function Hero() {
   return (
-    <div className="hero-container">
-      <HeroTopbar />
-      <HeroHeading />
-      <HeroButtons />
-      <HeroSearch />
-      <PopularSkills />
-      <PopularServices />
-      <TrustedFreelancers />
+    <>
+      <div className="hero-container">
+        <HeroTopbar />
+        <HeroHeading />
+        <HeroButtons />
+        <HeroSearch />
+        <PopularSkills />
+        <PopularServices />
+        <TrustedFreelancers />
+      </div>
+      
+      {/* Footer ligger utanför hero-container */}
       <Footer />
-    </div>
+    </>
   );
 }
 
