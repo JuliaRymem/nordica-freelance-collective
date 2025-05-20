@@ -1,6 +1,5 @@
 import React from "react";
 import "./hero.css";
-import HeroTopbar from "./HeroTopbar";
 import HeroHeading from "./HeroHeading";
 import HeroButtons from "./HeroButtons";
 import HeroSearch from "./HeroSearch";
@@ -12,8 +11,8 @@ import Footer from "./Footer";
 function Hero() {
   return (
     <>
+
       <div className="hero-container">
-        <HeroTopbar />
         <HeroHeading />
         <HeroButtons />
         <HeroSearch />
@@ -21,8 +20,7 @@ function Hero() {
         <PopularServices />
         <TrustedFreelancers />
       </div>
-      
-      {/* Footer ligger utanför hero-container */}
+
       <Footer />
     </>
   );
