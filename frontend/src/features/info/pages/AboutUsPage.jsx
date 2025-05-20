@@ -1,28 +1,27 @@
-// AboutUsPage.jsx
-function AboutUsPage() {
+import React from "react";
+
+export default function AboutUsPage() {
   return (
-    <section>
-      <h1>About Nordic Freelance Collective</h1>
-
-      <p>
-        Nordic Freelance Collective är en plattform skapad för att koppla samman professionella frilansare
-        inom design, utveckling och andra digitala tjänster med uppdragsgivare i Norden.
+    <section className="p-4 max-w-4xl mx-auto">
+      <h1 className="text-3xl font-bold mb-4">Om Nordica Freelance Collective</h1>
+      <p className="mb-6">
+        Vi är ett nätverk av kreativa frilansare inom design, utveckling och strategi. 
+        Vårt mål är att skapa kvalitativa samarbeten och projekt som gör skillnad.
       </p>
 
-      <h2>Om Ägaren</h2>
-      <p>
-        Företaget grundades av en passionerad entreprenör med visionen att skapa ett tryggt och kreativt
-        community för frilansare. Med flera års erfarenhet inom tech-branschen driver vi detta projekt
-        med fokus på tillit, kvalitet och hållbarhet.
+      <h2 className="text-2xl font-semibold mb-2">Om grundaren</h2>
+      <p className="mb-6">
+        Vår grundare har lång erfarenhet inom tech-branschen och brinner för att hjälpa frilansare växa och nå sina mål.
       </p>
 
-      <h2>Vill du jobba med oss?</h2>
+      <h3 className="text-xl font-medium mb-2">Vill du jobba med oss?</h3>
       <p>
-        Är du frilansare och vill bli en del av vårt kollektiv? Skicka gärna ett mejl till:{" "}
-        <a href="mailto:NFC@rekrytering.se">NFC@rekrytering.se</a>
+        Skicka gärna ett mejl till{" "}
+        <a href="mailto:NFC@rekrytering.se" className="text-blue-600 underline">
+          NFC@rekrytering.se
+        </a>
+        .
       </p>
     </section>
   );
 }
-
-export default AboutUsPage;
