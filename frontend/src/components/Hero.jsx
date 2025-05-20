@@ -10,7 +10,6 @@ import TrustedFreelancers from "./TrustedFreelancers";
 function Hero() {
   return (
     <>
-
       <div className="hero-container">
         <HeroHeading />
         <HeroButtons />
@@ -19,10 +18,7 @@ function Hero() {
         <PopularServices />
         <TrustedFreelancers />
       </div>
-
-      <Footer />
     </>
-
   );
 }
 
