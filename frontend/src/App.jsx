@@ -6,6 +6,7 @@ import SinglePageProject from "./features/products/pages/SinglePageProject";
 import FreelancerSearchList from "./features/search/FreelancerSearchList";
 import HeroTopbar from "./components/HeroTopbar"; //
 import { Route, Routes } from "react-router-dom";
+import AboutUsPage from "./features/info/pages/AboutUsPage";
 
 const queryClient = new QueryClient();
 
@@ -20,7 +21,7 @@ function App() {
         {/* Andra sektioner */}
         <Route path="/freelancer" element={<FreelancerList />} />
         <Route path="/freelancer/:slug" element={<SinglePageProject />} />
-        <Route path="/about" element={<h1>About page</h1>} />
+        <Route path="/about" element={<AboutUsPage />} />
       </Routes>
       <Footer />
     </QueryClientProvider>
