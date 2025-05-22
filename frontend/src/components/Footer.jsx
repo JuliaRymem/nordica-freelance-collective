@@ -45,7 +45,7 @@ const Footer = () => {
 
         {/* Footer-text */}
         <p className="text-center text-xs text-gray-500">
-          &copy; 2025 Nordic Freelance Collective.
+          &copy; 2025 Nordica Freelance Collective
         </p>
       </div>
     </footer>
