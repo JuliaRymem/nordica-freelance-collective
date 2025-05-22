@@ -8,20 +8,58 @@
   transition: background 0.5s ease;
 }
 
+/* Header container */
 .hero-topbar {
-  @apply flex justify-between items-center mb-4 px-4 sm:px-6 lg:px-30;
+  @apply relative flex items-center justify-between px-4 sm:px-6 lg:px-20 mb-20;
+  height: 96px;
 }
 
+/* Loggan - vänsterjusterad och centrerad vertikalt */
 .hero-logo {
-  @apply h-24 sm:h-28 md:h-42 rounded-full shadow-lg transition-transform duration-300 ease-in-out;
+  @apply h-20 sm:h-24 md:h-52 mt-48 rounded-full shadow-lg transition-transform duration-300 ease-in-out;
+
 }
 
-/* Navigationsknappar */
+/* Centrera navigeringen i mitten av topbaren */
+.hero-nav-wrapper {
+  @apply absolute left-1/2 transform -translate-x-1/2;
+}
+
+/* Navigationslänkar */
 .hero-nav-links {
-  @apply hidden md:flex space-x-10 items-center;
+  @apply flex items-center mt-20 space-x-3 sm:space-x-5 md:space-x-8;
 }
 
+/* Individuell länkstil */
 .hero-nav-link {
+
+  @apply text-xs sm:text-sm font-semibold px-3 py-1 sm:px-4 sm:py-2 rounded-full text-gray-800;
+}
+
+/* Hover-effekt */
+.hero-nav-link:hover {
+  @apply bg-white text-amber-700 shadow-md;
+}
+
+/* Responsiv justering på små skärmar */
+@media (max-width: 430px) {
+  .hero-logo {
+    @apply h-16;
+  }
+
+  .hero-nav-link {
+    @apply text-[10px] px-2 py-1;
+  }
+
+  .hero-topbar {
+    @apply px-3;
+    height: 80px;
+  }
+}
+
+
+
+/* Heading - rubrik */
   @apply text-gray-800 text-sm font-medium tracking-wide transition-colors duration-200 hover:text-amber-500;
 }
 
@@ -144,7 +182,7 @@
 
 /* --- Trusted - wrapper - sektion --- */
 .trusted-combined-wrapper {
-  @apply w-full max-w-6xl mx-auto mt-20 px-4 mb-28; /* lägg till mb-28 för utrymme under */
+  @apply w-full max-w-6xl mx-auto mt-40 px-4;
 }
 
 .trusted-image-section {
