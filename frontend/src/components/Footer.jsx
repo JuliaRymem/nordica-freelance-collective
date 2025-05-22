@@ -1,5 +1,5 @@
 import React from "react";
-import { Facebook, Twitter, Instagram } from "lucide-react";
+import { Facebook, Linkedin, Instagram, Mail } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -13,7 +13,16 @@ const Footer = () => {
   Kom i kontakt med oss
 </p>
         {/* Sociala ikoner */}
+        
         <div className="flex gap-15">
+        <a
+            href="#"
+            aria-label="Email"
+            className="hover:text-orange-800 transition-transform transform hover:scale-110"
+          >
+            <Mail size={40} />
+          </a>
+
           <a
             href="https://facebook.com"
             target="_blank"
@@ -24,13 +33,13 @@ const Footer = () => {
             <Facebook size={40} />
           </a>
           <a
-            href="https://twitter.com"
+            href="https://linkedin.com"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="Twitter"
-            className="hover:text-sky-500 transition-transform transform hover:scale-110"
+            aria-label="LinkedIn"
+            className="hover:text-blue-700 transition-transform transform hover:scale-110"
           >
-            <Twitter size={40} />
+          <Linkedin size={40} />
           </a>
           <a
             href="https://instagram.com"
