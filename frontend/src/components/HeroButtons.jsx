@@ -16,7 +16,7 @@ export default function HeroButtons() {
   return (
     <div className="hero-buttons">
       <button className="btn-login cursor-pointer" onClick={handleLogIn}>
-        {isUserLoggedIn ? "Logga ut" : "Logga in"}
+        {isUserLoggedIn ? "LOGGA UT" : "LOGGA IN"}
       </button>
       <button className="btn-join ">JOIN US</button>
       <LoginModal isOpen={modalOpen} onClose={() => setModalOpen(false)} />
