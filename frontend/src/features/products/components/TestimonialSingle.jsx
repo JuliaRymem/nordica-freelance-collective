@@ -16,7 +16,7 @@ const TestimonialSingle = ({ data }) => {
             className={`relative ${
               data.length <= 1
                 ? "w-full h-full"
-                : "bg-[#FDFFFF] p-6 rounded-xl shadow-md w-full mx-auto"
+                : "bg-[#FDFFFF] p-6 rounded-xl shadow-md min-w-2xs w-auto mx-auto"
             }`}
           >
             <article
