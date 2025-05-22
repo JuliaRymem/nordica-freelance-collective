@@ -4,25 +4,29 @@ import Footer from "./components/Footer";
 import { QueryClientProvider, QueryClient } from "@tanstack/react-query";
 import SinglePageProject from "./features/products/pages/SinglePageProject";
 import FreelancerSearchList from "./features/search/FreelancerSearchList";
-import Navbar from "../src/features/products/components/navbar";
+import HeroTopbar from "./components/HeroTopbar"; //
+import { Route, Routes } from "react-router-dom";
+import AboutUsPage from "./features/info/pages/AboutUsPage";
+import { AuthProvider } from "./context/authContext";
 
 const queryClient = new QueryClient();
 
 function App() {
   return (
     <QueryClientProvider client={queryClient}>
-      <Hero />
-
-     {/* <Navbar />
-
-      {/* <h2>Testa FreelancerSearchList</h2> /}
-      <FreelancerSearchList />
-      {/ <h1>Våra frilansare</h1> /}
-      <FreelancerList />
-
-      {/ <SinglePageProject /> */}
-
-      <Footer />
+      <AuthProvider>
+        {/* Header */}
+        <HeroTopbar />
+        <Routes>
+          {/* Hero-sektion */}
+          <Route path="/" element={<Hero />} />
+          {/* Andra sektioner */}
+          <Route path="/freelancer" element={<FreelancerList />} />
+          <Route path="/freelancer/:slug" element={<SinglePageProject />} />
+          <Route path="/about" element={<AboutUsPage />} />
+        </Routes>
+        <Footer />
+      </AuthProvider>
     </QueryClientProvider>
   );
 }

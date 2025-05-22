@@ -23,7 +23,7 @@ const FreelancerSinlge = ({ data }) => {
           </header>
           <div className="skill-div-mobile skill-div-mb">
             <h3 className="text-lg font-semibold text-gray-800">Skills:</h3>
-            <div className="relative w-32 h-6 overflow-hidden ">
+            <div className="relative w-60 h-6 overflow-hidden ">
               <ul className="animate-slide">
                 {data.skills.map((skill, index) => (
                   <li

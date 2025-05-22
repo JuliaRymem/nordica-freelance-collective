@@ -1,44 +1,54 @@
 @import "tailwindcss";
 
-/* --- Hero Container --- */
+/* Container - Hero */
 .hero-container {
-  @apply min-h-screen bg-gradient-to-br from-[#b3c4c5] to-[#8fa3a4] text-white px-6 py-10 font-sans flex flex-col justify-between transition-all duration-500;
+  @apply min-h-screen bg-[#b3c4c5] text-white px-6 py-10 font-sans flex flex-col justify-between;
+  background: linear-gradient(135deg, #b3c4c5 0%, #8fa3a4 100%);
+  /* Lägg till subtil gradient för mer djup */
+  transition: background 0.5s ease;
 }
 
-/* --- Top Bar --- */
 .hero-topbar {
   @apply flex justify-between items-center mb-4 px-4 sm:px-6 lg:px-30;
 }
 
 .hero-logo {
-  @apply h-24 sm:h-28 md:h-50 rounded-full shadow-lg transition-transform duration-300 ease-in-out;
+  @apply h-24 sm:h-28 md:h-42 rounded-full shadow-lg transition-transform duration-300 ease-in-out;
 }
 
-/* --- Navigation Links --- */
+/* Navigationsknappar */
 .hero-nav-links {
-  @apply hidden md:flex space-x-7 items-center;
+  @apply hidden md:flex space-x-10 items-center;
 }
 
 .hero-nav-link {
   @apply text-gray-800 text-sm font-medium tracking-wide transition-colors duration-200 hover:text-amber-500;
 }
 
-/* --- Menu Icon --- */
+/* --- Menu Icon (for mobile) --- */
 .hero-menu-icon {
   @apply text-black h-8 w-8 sm:h-10 sm:w-10 cursor-pointer transition-colors duration-200 hover:text-amber-400;
 }
-
+.hero-menu-icon:hover {
+  @apply text-amber-400;
+}
 /* --- Hero Heading --- */
 .hero-heading {
-  @apply text-5xl md:text-6xl font-extrabold leading-tight text-center mb-8 drop-shadow-lg px-4;
+  @apply text-5xl md:text-6xl font-extrabold leading-tight text-center mb-8 drop-shadow-lg;
   text-shadow: 5px 3px 15px rgba(0, 0, 0, 0.75);
   letter-spacing: 0.05em;
   transition: transform 0.3s ease;
 }
 
+@media (max-width: 430px) {
+  .hero-heading {
+    @apply text-3xl px-4;
+  }
+}
+
 /* --- Buttons Section --- */
 .hero-buttons {
-  @apply flex justify-center space-x-6 mb-10;
+  @apply flex justify-center space-x-6 mb-6;
 }
 
 .btn-login,
@@ -54,10 +64,9 @@
 .btn-join {
   @apply bg-[#222] text-white border border-black hover:bg-neutral-900 hover:shadow-lg;
 }
-
-/* --- Search Bar --- */
+/* Sökrutan */
 .hero-search {
-  @apply flex items-center bg-[#edf3f3] rounded-full px-6 py-3 border border-gray-300 w-full max-w-md mx-auto mb-1 shadow-md hover:shadow-lg transition-shadow duration-300;
+  @apply flex items-center bg-[#edf3f3] rounded-full px-6 py-3 border border-gray-300 w-full max-w-md mx-auto mb-3 shadow-md hover:shadow-lg transition-shadow duration-300;
 }
 
 .search-input {
@@ -68,9 +77,10 @@
   @apply text-gray-500 mr-2 h-5 w-5;
 }
 
+
 /* --- Popular Skills --- */
 .popular-skills-wrapper {
-  @apply flex flex-col items-center text-center mt-1 space-y-2;
+  @apply flex flex-col items-center text-center mt-2 space-y-2;
 }
 
 .popular-skills-label {
@@ -90,9 +100,13 @@
   @apply min-h-screen flex justify-center items-center px-4;
 }
 
-/* --- Popular Services --- */
+/* Pupular services */
+.popular-services-wrapper {
+  @apply flex justify-center items-center px-1 pt-30 pb-20;
+}
+
 .popular-services-section {
-  @apply bg-white rounded-3xl p-7 w-full max-w-6xl shadow-2xl flex flex-col justify-center items-center text-center transition-shadow;
+  @apply bg-white rounded-3xl p-7 mt-16 mb-28 w-full max-w-7xl shadow-2xl flex flex-col justify-center items-center text-center transition-shadow;
 }
 
 .popular-services-header {
@@ -100,7 +114,7 @@
 }
 
 .popular-services-title {
-  @apply text-4xl font-extrabold text-gray-800 mb-3 leading-snug;
+  @apply text-4xl font-extrabold mb-3 text-gray-800;
 }
 
 .popular-services-subtitle {
@@ -108,7 +122,7 @@
 }
 
 .popular-services-grid {
-  @apply grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-10 w-full;
+  @apply grid md:grid-cols-3 gap-12 max-w-7xl mx-auto mt-10;
 }
 
 .popular-service-card {
@@ -128,10 +142,9 @@
   @apply text-sm text-gray-600 leading-relaxed;
 }
 
-
-/* --- Trusted Section --- */
+/* --- Trusted - wrapper - sektion --- */
 .trusted-combined-wrapper {
-  @apply w-full max-w-6xl mx-auto mt-10 px-4 mb-28;
+  @apply w-full max-w-6xl mx-auto mt-20 px-4 mb-28; /* lägg till mb-28 för utrymme under */
 }
 
 .trusted-image-section {
@@ -144,8 +157,9 @@
 }
 
 .trusted-card-overlay {
-  @apply absolute left-1/2 transform -translate-x-1/2 bottom-[-10px]
+  @apply absolute left-1/2 transform -translate-x-1/2 
     bg-white rounded-3xl p-6 w-[90%] max-w-2xl shadow-xl flex flex-col items-center text-center;
+  bottom: -10px; /* Nytt! skjuter ner kortet under bilden */
 }
 
 .trusted-title {

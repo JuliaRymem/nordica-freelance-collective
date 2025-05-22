@@ -18,6 +18,7 @@ title->titleName match "*${query}*" ||
 skills[]->skillName match "*${query}*"
 )]{
 _id,
+slug,
 freelancerName,
 title->{titleName},
 skills[]->{skillName},
