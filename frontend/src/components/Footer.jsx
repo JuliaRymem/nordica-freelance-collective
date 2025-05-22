@@ -3,12 +3,17 @@ import { Facebook, Twitter, Instagram } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="w-full bg-[#e6eded] text-gray-700 mt-10 px- py-12 shadow-inner">
-      <div className="max-w-10xl mx-auto flex flex-col items-center space-y-6">
-
-        <br />
-        {/* Ikoner */}
-        <div className="flex gap-10">
+    <footer
+      id="footer"
+      className="w-full bg-[#e6eded] text-gray-700 mt-10 px-6 py-12 shadow-inner"
+    >
+      <div className="max-w-7xl mx-auto flex flex-col items-center space-y-6">
+      
+      <p className="text-center text-xl text-gray-600">
+  Kom i kontakt med oss
+</p>
+        {/* Sociala ikoner */}
+        <div className="flex gap-15">
           <a
             href="https://facebook.com"
             target="_blank"
@@ -37,10 +42,10 @@ const Footer = () => {
             <Instagram size={40} />
           </a>
         </div>
-<br />
-        {/* Text */}
-        <p className="text-center text-sm text-gray-500">
-          &copy; 2025 Nordic Freelance Collective. Alla rättigheter förbehållna.
+
+        {/* Footer-text */}
+        <p className="text-center text-xs text-gray-500">
+          &copy; 2025 Nordic Freelance Collective.
         </p>
       </div>
     </footer>
