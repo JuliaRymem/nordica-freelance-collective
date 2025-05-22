@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const services = [
   {
@@ -24,7 +25,17 @@ export default function PopularServices() {
           <p className="popular-services-subtitle">
             Våra mest efterfrågade kompetenser just nu
           </p>
+
+          {/* Knapp - (test)  */}
+          <div className="mt-6 flex justify-center">
+            <Link to="/freelancer">
+              <button className="bg-amber-600 hover:bg-amber-700 text-white font-semibold py-2 px-6 rounded-full transition-colors duration-300 shadow-md">
+                Läs mer här
+              </button>
+            </Link>
+          </div>
         </div>
+
         <div className="popular-services-grid">
           {services.map((service, idx) => (
             <div key={idx} className="popular-service-card">
@@ -37,4 +48,3 @@ export default function PopularServices() {
     </div>
   );
 }
-
