@@ -3,7 +3,6 @@ import "./hero.css";
 import HeroHeading from "./HeroHeading";
 import HeroButtons from "./HeroButtons";
 import HeroSearch from "./HeroSearch";
-import PopularSkills from "./PopularSkills";
 import PopularServices from "./PopularServices";
 import TrustedFreelancers from "./TrustedFreelancers";
 
@@ -14,7 +13,6 @@ function Hero() {
         <HeroHeading />
         <HeroButtons />
         <HeroSearch />
-        <PopularSkills />
         <PopularServices />
         <TrustedFreelancers />
       </div>
