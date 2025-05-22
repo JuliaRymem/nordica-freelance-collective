@@ -10,11 +10,11 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto flex flex-col items-center space-y-6">
       
       <p className="text-center text-xl text-gray-600">
-  Kom i kontakt med oss
-</p>
+      Kom i kontakt med oss 
+  </p>
         {/* Sociala ikoner */}
         
-        <div className="flex gap-15">
+        <div className="flex gap-8">
         <a
             href="#"
             aria-label="Email"
