@@ -17,22 +17,24 @@ const services = [
 
 export default function PopularServices() {
   return (
-    <section className="popular-services-section">
-      <div className="popular-services-header">
-        <h2 className="popular-services-title">Popular Services</h2>
-        <p className="popular-services-subtitle">
-          Våra mest efterfrågade kompetenser just nu.
-        </p>
-      </div>
-      <div className="popular-services-grid">
-        {services.map((service, idx) => (
-          <div key={idx} className="popular-service-card">
-            <h3 className="popular-service-title">{service.title}</h3>
-            <p className="popular-service-description">{service.description}</p>
-          </div>
-        ))}
-      </div>
-    </section>
+    <div className="popular-services-wrapper">
+      <section className="popular-services-section">
+        <div className="popular-services-header">
+          <h2 className="popular-services-title">Populära tjänster</h2>
+          <p className="popular-services-subtitle">
+            Våra mest efterfrågade kompetenser just nu
+          </p>
+        </div>
+        <div className="popular-services-grid">
+          {services.map((service, idx) => (
+            <div key={idx} className="popular-service-card">
+              <h3 className="popular-service-title">{service.title}</h3>
+              <p className="popular-service-description">{service.description}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+    </div>
   );
 }
 
