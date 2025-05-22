@@ -6,23 +6,27 @@ import SinglePageProject from "./features/products/pages/SinglePageProject";
 import FreelancerSearchList from "./features/search/FreelancerSearchList";
 import HeroTopbar from "./components/HeroTopbar"; //
 import { Route, Routes } from "react-router-dom";
+import AboutUsPage from "./features/info/pages/AboutUsPage";
+import { AuthProvider } from "./context/authContext";
 
 const queryClient = new QueryClient();
 
 function App() {
   return (
     <QueryClientProvider client={queryClient}>
-      {/* Header */}
-      <HeroTopbar />
-      <Routes>
-        {/* Hero-sektion */}
-        <Route path="/" element={<Hero />} />
-        {/* Andra sektioner */}
-        <Route path="/freelancer" element={<FreelancerList />} />
-        <Route path="/freelancer/:slug" element={<SinglePageProject />} />
-        <Route path="/about" element={<h1>About page</h1>} />
-      </Routes>
-      <Footer />
+      <AuthProvider>
+        {/* Header */}
+        <HeroTopbar />
+        <Routes>
+          {/* Hero-sektion */}
+          <Route path="/" element={<Hero />} />
+          {/* Andra sektioner */}
+          <Route path="/freelancer" element={<FreelancerList />} />
+          <Route path="/freelancer/:slug" element={<SinglePageProject />} />
+          <Route path="/about" element={<AboutUsPage />} />
+        </Routes>
+        <Footer />
+      </AuthProvider>
     </QueryClientProvider>
   );
 }

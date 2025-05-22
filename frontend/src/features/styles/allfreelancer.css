@@ -25,8 +25,8 @@
   }
 
   .freelancerId {
-    @apply bg-white p-4 rounded-xl shadow-xl hover:scale-105 transition;
-  }
+  @apply bg-white p-4 rounded-xl shadow-xl hover:scale-105 transition flex flex-col justify-between h-full;
+}
 
   .freelancerImage {
     @apply w-26 h-26 object-cover rounded-lg mx-auto mb-4;
@@ -57,7 +57,7 @@
   }
 
   .readMoreBtn {
-    @apply bg-blue-200 px-5 p-1 text-lg hover:bg-blue-400 hover:text-white rounded-xl mt-5;
+    @apply inline-block mx-auto bg-blue-200 px-5 p-1 text-lg hover:bg-blue-400 hover:text-white rounded-xl mt-5;
   }
 
   /* STYLING SÖKFUNKTION */
