@@ -37,7 +37,7 @@ const SinglePageProject = () => {
           <TestimonialSingle data={data[0]?.testimonial} />
         </div>
       </section>
-      '
+
       <section className="flex flex-row items-center m-w-50 mx-auto gap-3">
         {isUserLoggedIn && (
           <button
