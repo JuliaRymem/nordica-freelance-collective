@@ -24,9 +24,8 @@ export default function SearchBar({ onSearch }) {
       onChange={handleChange}
     />
 
-    {/* Mic + Arrow till höger */}
+    {/* Arrow till höger */}
     <div className="iconRight">
-      <Mic className="micIcon" />
       <ArrowRight className="arrowRight" />
     </div>
   </div>

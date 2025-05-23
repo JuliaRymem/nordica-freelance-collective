@@ -79,7 +79,7 @@
   @apply flex items-center gap-2 ml-3;
 }
 
-.micIcon,
+
 .arrowRight {
   @apply w-5 h-5 text-black;
 }
