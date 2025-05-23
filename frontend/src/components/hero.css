@@ -35,7 +35,8 @@
 }
 
 .btn-join {
-  @apply bg-[#222] text-white border border-black hover:bg-neutral-900 hover:shadow-lg;
+  @apply bg-[#222] text-white border border-black 
+         hover:bg-neutral-900 hover:shadow-2xl transition-shadow duration-300;
 }
 
 

@@ -12,12 +12,22 @@ export default function HeroButtons() {
       console.log(`Lyckades logga in ${result.user.displayName}`);
     });
   };
+
+  const scrollToFooter = () => {
+    const footer = document.getElementById("footer");
+    if (footer) {
+      footer.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <div className="hero-buttons">
       <button className="btn-login cursor-pointer" onClick={handleLogIn}>
         {isUserLoggedIn ? "LOGGA UT" : "LOGGA IN"}
       </button>
-      <button className="btn-join ">JOIN US</button>
+      <button className="btn-join" onClick={scrollToFooter}>
+        JOIN US
+      </button>
     </div>
   );
 }
