@@ -1,17 +1,16 @@
 import React from "react";
-import { useState } from "react";
-import { LoginModal } from "./LoginModal";
 import useAuth from "../features/hook/useAuth";
 
 export default function HeroButtons() {
-  const [modalOpen, setModalOpen] = useState(false);
-  const { isUserLoggedIn, doSignOut } = useAuth();
+  const { isUserLoggedIn, doSignOut, doSignInWithGoogle } = useAuth();
 
   const handleLogIn = () => {
     if (isUserLoggedIn) {
       return doSignOut();
     }
-    setModalOpen(true);
+    doSignInWithGoogle().then((result) => {
+      console.log(`Lyckades logga in ${result.user.displayName}`);
+    });
   };
   return (
     <div className="hero-buttons">
@@ -19,7 +18,6 @@ export default function HeroButtons() {
         {isUserLoggedIn ? "LOGGA UT" : "LOGGA IN"}
       </button>
       <button className="btn-join ">JOIN US</button>
-      <LoginModal isOpen={modalOpen} onClose={() => setModalOpen(false)} />
     </div>
   );
 }

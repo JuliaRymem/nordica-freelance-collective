@@ -6,8 +6,11 @@ function TestimonialForm({ freelancerId, onClose }) {
   const [uploadImage, setUploadImage] = useState(null);
   const [comment, setComment] = useState("");
   const [rating, setRating] = useState(0);
+  const [hoverRating, setHoverRating] = useState(0);
   const [error, setError] = useState("");
   const [isLoading, setIsLoading] = useState(false);
+
+  const stars = [1, 2, 3, 4, 5];
 
   // Mutation inneåller funktion för köra post,loading, error och success
   const mutation = usePostTestimonial();
@@ -65,6 +68,7 @@ function TestimonialForm({ freelancerId, onClose }) {
         value={title}
         onChange={(e) => setTitle(e.target.value)}
         type="text"
+        placeholder="Ditt eller företagets namn."
         className=" p-1 border rounded"
       />
 
@@ -90,17 +94,29 @@ function TestimonialForm({ freelancerId, onClose }) {
         onChange={(e) => setComment(e.target.value)}
         className="border rounded p-1 max-h-50"
       />
-      <label htmlFor="rating" className="text-left">
-        Omdöme:
-        <input
-          type="number"
-          value={rating}
-          onChange={(e) => setRating(e.target.value)}
-          id="rating"
-          min="1"
-          max="5"
-        />
-      </label>
+
+      <section className="flex gap-1 items-center">
+        <label htmlFor="rating" className="text-left">
+          Hur nöjd är du?
+        </label>
+        {stars.map((star) => (
+          <button
+            key={star}
+            type="button"
+            onClick={() => setRating(star)}
+            onMouseEnter={() => setHoverRating(star)}
+            onMouseLeave={() => setHoverRating(0)}
+            className={`text-4xl flex flex-row transition ${
+              star <= (hoverRating || rating)
+                ? "text-yellow-400"
+                : "text-gray-400"
+            }`}
+            aria-label="Sätt betyg 1-5"
+          >
+            ★
+          </button>
+        ))}
+      </section>
 
       {error && <p className="text-red-600">{error}</p>}
       <button
