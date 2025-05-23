@@ -10,7 +10,7 @@
     @apply text-center;
   }
   .ourFreelancer {
-    @apply text-3xl font-extrabold text-gray-900;
+    @apply text-5xl font-extrabold text-gray-900;
   }
 
   .freelancer {
@@ -63,7 +63,7 @@
   /* STYLING SÖKFUNKTION */
 
 .searchBar {
-  @apply relative flex items-center bg-[#edf3f3] rounded-full px-6 py-3 border border-gray-300 w-full max-w-md mx-auto mb-3 shadow-md hover:shadow-lg transition-shadow duration-300 mb-6;
+  @apply relative flex items-center bg-white rounded-2xl px-6 py-3 border border-gray-300 w-full max-w-md mx-auto mb-3 shadow-md hover:shadow-lg transition-shadow duration-300 mb-6;
 }
 
 .iconLeft {
@@ -71,7 +71,8 @@
 }
 
 .bar {
-  @apply flex-grow italic text-gray-700 text-sm bg-transparent outline-none placeholder-gray-400;
+  @apply flex-grow bg-transparent outline-none placeholder-gray-400 
+         text-gray-700 text-base tracking-wide italic;
 }
 
 .iconRight {
