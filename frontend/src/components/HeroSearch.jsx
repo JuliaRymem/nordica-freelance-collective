@@ -1,7 +1,15 @@
-import React from "react";
-import { Search, Mic, ArrowRight } from "lucide-react";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { Search, ArrowRight } from "lucide-react";
 
 export default function HeroSearch() {
+  const [query, setQuery] = useState("");
+  const navigate = useNavigate();
+
+  const handleSearch = () => {
+    navigate("/freelancer");
+  };
+
   return (
     <div>
       <div className="hero-search">
@@ -10,9 +18,10 @@ export default function HeroSearch() {
           type="text"
           placeholder="Vad söker du efter?..."
           className="search-input"
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
         />
-        <Mic className="search-icon mx-2" />
-        <ArrowRight className="search-icon" />
+        <ArrowRight className="search-icon cursor-pointer" onClick={handleSearch} />
       </div>
     </div>
   );
