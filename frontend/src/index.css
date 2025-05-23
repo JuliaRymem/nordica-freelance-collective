@@ -4,3 +4,6 @@ body {
   font-family: "Inter", sans-serif;
   background-color: #b3c4c5;
 }
+html {
+  scroll-behavior: smooth;
+}
