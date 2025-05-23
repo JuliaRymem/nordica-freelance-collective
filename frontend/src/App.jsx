@@ -8,6 +8,7 @@ import HeroTopbar from "./components/HeroTopbar"; //
 import { Route, Routes } from "react-router-dom";
 import AboutUsPage from "./features/info/pages/AboutUsPage";
 import { AuthProvider } from "./context/authContext";
+import ScrollToTop from "./features/products/components/ScrollToTop";
 
 const queryClient = new QueryClient();
 
@@ -15,6 +16,7 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <AuthProvider>
+        <ScrollToTop />
         {/* Header */}
         <HeroTopbar />
         <Routes>
