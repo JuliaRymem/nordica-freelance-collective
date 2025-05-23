@@ -22,6 +22,7 @@ slug,
 freelancerName,
 title->{titleName},
 skills[]->{skillName},
+category->{categoryName},
 picture {
 asset->{url}
 }}`
