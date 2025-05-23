@@ -12,24 +12,24 @@ export default function SearchBar({ onSearch }) {
 
   return (
   <div className="searchBar">
-      <div className="searchIcon">
-        {/* Sökikon till vänster */}
-        <Search className="iconLeft"  />
-        {/* Inputfältet */}
-        <input
-          className="bar"
-          type="text"
-          placeholder="Sök frilansare..."
-          value={query}
-          onChange={handleChange}
-        />
+    {/* Sökikon till vänster */}
+    <Search className="iconLeft" />
 
-        {/* Mic + Arrow till höger */}
-        <div className="iconRight">
-          <Mic className="micIcon" />
-          <ArrowRight className="arrowRight"  />
-        </div>
-      </div>
+    {/* Inputfältet */}
+    <input
+      className="bar"
+      type="text"
+      placeholder="Sök frilansare..."
+      value={query}
+      onChange={handleChange}
+    />
+
+    {/* Mic + Arrow till höger */}
+    <div className="iconRight">
+      <Mic className="micIcon" />
+      <ArrowRight className="arrowRight" />
     </div>
-  );
+  </div>
+);
+  
 }

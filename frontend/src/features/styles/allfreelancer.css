@@ -25,8 +25,8 @@
   }
 
   .freelancerId {
-  @apply bg-white p-4 rounded-xl shadow-xl hover:scale-105 transition flex flex-col justify-between h-full;
-}
+    @apply bg-white p-4 rounded-xl shadow-xl hover:scale-105 transition flex flex-col justify-between h-full;
+  }
 
   .freelancerImage {
     @apply w-26 h-26 object-cover rounded-lg mx-auto mb-4;
@@ -62,33 +62,26 @@
 
   /* STYLING SÖKFUNKTION */
 
-  .searchBar {
-    @apply flex justify-center mt-1 mb-3;
-  }
+.searchBar {
+  @apply relative flex items-center bg-[#edf3f3] rounded-full px-6 py-3 border border-gray-300 w-full max-w-md mx-auto mb-3 shadow-md hover:shadow-lg transition-shadow duration-300 mb-6;
+}
 
-  .searchIcon {
-    @apply relative;
-  }
+.iconLeft {
+  @apply w-5 h-5 text-black mr-3;
+}
 
-  .iconLeft {
-    @apply absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 w-5 h-5;
-  }
+.bar {
+  @apply flex-grow italic text-gray-700 text-sm bg-transparent outline-none placeholder-gray-400;
+}
 
-  .bar {
-    @apply pl-10 pr-20 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ffffff53C];
-  }
+.iconRight {
+  @apply flex items-center gap-2 ml-3;
+}
 
-  .iconRight {
-    @apply absolute right-3 top-1/2 -translate-y-1/2 flex items-center space-x-2;
-  }
-
-  .micIcon {
-    @apply text-gray-400 w-5 h-5;
-  }
-
-  .arrowRight {
-    @apply text-gray-400 cursor-pointer;
-  }
+.micIcon,
+.arrowRight {
+  @apply w-5 h-5 text-black;
+}
 
   .noResult {
     @apply text-center mt-2 text-lg text-gray-600;
