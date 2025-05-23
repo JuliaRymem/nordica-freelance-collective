@@ -39,7 +39,7 @@ const TestimonialSingle = ({ data }) => {
               {item.comment}
             </p>
             <article className="flex pt-4">
-              <p>Omdöme: </p>
+              <p>Kundbetyg: </p>
               {Array(item.rating)
                 .fill()
                 .map((_, index) => (

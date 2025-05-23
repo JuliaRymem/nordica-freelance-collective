@@ -41,7 +41,7 @@ const SinglePageProject = () => {
       {isUserLoggedIn && (
         <button
           onClick={() => setModalOpen(true)}
-          className="shadow-xl rounded-md p-3 max-w-md mx-auto cursor-pointer bg-gradient-turquoise-blue text-whitetext-shadow-lg hover:text-white/40 transition-transform duration-300 hover:scale-110"
+          className="readMoreBtn cursor-pointer"
         >
           Skriv en Testimonial
         </button>

@@ -19,9 +19,9 @@ const ProjectsSingle = ({ data }) => {
             <p
               className={`absolute top-2 right-2 first-letter:uppercase ${
                 item.status === "completed" ? "text-green-500" : ""
-              }`}
+              }${item.status === "in_progress" ? "text-orange-400" : ""}`}
             >
-              {item.status}
+              Project Status: {item.status}
             </p>
             <time
               dateTime="2025-05-15"
