@@ -21,6 +21,7 @@ export const AuthProvider = ({ children }) => {
     if (user) {
       // Om user finns, läggs all information till i currentuser och loggedin blir true.
       setCurrentUser({ ...user });
+
       setIsUserLoggedIn(true);
     } else {
       setCurrentUser(null);
